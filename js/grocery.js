@@ -47,7 +47,9 @@ var products = [
         type: 'clothes'
     }
 ]
-var cartList = [];
+var cartList = [
+    //aquí s'han d'afegir els productes
+];
 var cart = [];
 var subtotal = {
     grocery: {
@@ -68,7 +70,13 @@ var total = 0;
 // Exercise 1
 function addToCartList(id) {
     // 1. Loop for to the array products to get the item to add to cart
+    for (var i = 1; i <= products.length; i++) {
+        
+
+    }
     // 2. Add found product to the cartList array
+    cartList.push();
+
 }
 
 // Exercise 2
