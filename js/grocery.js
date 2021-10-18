@@ -84,6 +84,8 @@ function cleanCart() {
         cartList.pop();
     }
 
+    console.log(cartList);
+
 }
 
 // Exercise 3
