@@ -69,18 +69,20 @@ var total = 0;
 
 // Exercise 1
 function addToCartList(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    for (var i = 1; i <= products.length; i++) {
-        
-
-    }
-    // 2. Add found product to the cartList array
-    cartList.push();
+    cartList.push(id);
+    console.log(id);
+    console.log(cartList);
+    
 
 }
 
+
 // Exercise 2
 function cleanCart() {
+
+    while (cartList.length > 0) {
+        cartList.pop();
+    }
 
 }
 
