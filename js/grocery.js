@@ -65,15 +65,13 @@ var subtotal = {
         discount: 0
     },
 };
-var total = 0;
+
 
 // Exercise 1
 function addToCartList(id) {
     cartList.push(id);
-    console.log(id);
     console.log(cartList);
     
-
 }
 
 
@@ -161,11 +159,26 @@ function calculateSubtotals() {
 
 }
 
+var total = 0;
+
 // Exercise 4
 function calculateTotal() {
     // Calculate total price of the cart either using the "cartList" array
 
-    console.log(total);
+//no podem fer això: fer en canvi, un FOR IN LOOP
+    //total = subtotal.grocery.value + subtotal.beauty.value + subtotal.clothes.value;
+      
+    for (let x in subtotal) {
+        
+
+
+        console.log(x);
+
+
+    }
+
+    console.log(total);  
+    
 }
 
 // Exercise 5
