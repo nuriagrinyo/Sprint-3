@@ -93,42 +93,43 @@ function calculateSubtotals() {
     // 1. Create a for loop on the "cartList" array 
     for (let i = 0; i < cartList.length; i++) {
 
-        // agafar les id
-        switch(id) {
+        let cartListId = cartList[i];
+
+        switch(cartListId) {
             case 1:
-                // sumar a grocery 10.5
+                subtotal.grocery.value = subtotal.grocery.value + 10.5;
                 break;
             
             case 2:
-                // sumar a grocery
+                subtotal.grocery.value = subtotal.grocery.value + 6.25;
                 break;
             
             case 3:
-                //sumar a grocery
+                subtotal.grocery.value = subtotal.grocery.value + 5;
                 break;
             
             case 4:
-                // sumar a beauty
+                subtotal.beauty.value = subtotal.beauty.value + 260;
                 break;
 
             case 5:
-                // sumar a beauty
+                subtotal.beauty.value = subtotal.beauty.value + 20.5;
                 break;
 
             case 6:
-                // sumar a beauty
+                subtotal.beauty.value = subtotal.beauty.value + 12.75;
                 break;
 
             case 7:
-                //sumar a clothes
+                subtotal.clothes.value = subtotal.clothes.value + 15;
                 break;
 
             case 8:
-                //sumar a clothes
+                subtotal.clothes.value = subtotal.clothes.value + 19.99;
                 break;
 
             case 9:
-                //sumar a clothes
+                subtotal.clothes.value = subtotal.clothes.value + 9.99;
                 break;
             
 
@@ -163,6 +164,8 @@ function calculateSubtotals() {
 // Exercise 4
 function calculateTotal() {
     // Calculate total price of the cart either using the "cartList" array
+
+    console.log(total);
 }
 
 // Exercise 5
