@@ -91,9 +91,70 @@ function cleanCart() {
 // Exercise 3
 function calculateSubtotals() {
     // 1. Create a for loop on the "cartList" array 
-    for (var i = 0; i < cartList.length; i++) {
+    for (let i = 0; i < cartList.length; i++) {
+
+        // agafar les id
+        switch(id) {
+            case 1:
+                // sumar a grocery 10.5
+                break;
+            
+            case 2:
+                // sumar a grocery
+                break;
+            
+            case 3:
+                //sumar a grocery
+                break;
+            
+            case 4:
+                // sumar a beauty
+                break;
+
+            case 5:
+                // sumar a beauty
+                break;
+
+            case 6:
+                // sumar a beauty
+                break;
+
+            case 7:
+                //sumar a clothes
+                break;
+
+            case 8:
+                //sumar a clothes
+                break;
+
+            case 9:
+                //sumar a clothes
+                break;
+            
+
+            /*
+            GROCERY
+            1- Cooking oil  10.5
+            2- Pasta 6,25
+            3- Inst Cupcake M 5
+
+            BEAUTY
+            4- all-in-1 260
+            5- zero makeup kit 20.5
+            6- lip tints 12.75
+
+            CLOTHES
+            7- Lawn dress 15
+            8- lawn ch combo 19.99
+            9- toddler frock 9.99
+            */
+                
+        }
+
+        
 
     }
+
     // 2. Implement inside the loop an if...else or switch...case to add the quantities of each type of product, obtaining the subtotals: subtotalGrocery, subtotalBeauty and subtotalClothes
     console.log(subtotal);
 
