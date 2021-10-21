@@ -70,7 +70,18 @@ var subtotal = {
 
 // Exercise 1
 function addToCartList(id) {
-    cartList.push(id);
+    //cartList.push(id);
+
+    for (let i = 0; i < products.length; i++) {
+
+        
+    }
+
+    cartList.push(products[0]);
+
+    let cartListId = id + 1;
+
+
     console.log(cartList);
     
 }
@@ -179,7 +190,32 @@ function calculateTotal() {
 // Exercise 5
 function generateCart() {
     // Using the "cartlist" array that contains all the items in the shopping cart, 
-    // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
+    // generate the "cart" array that does not contain repeated items, 
+    // instead each item of this array "cart" shows the quantity of product.
+
+    /*
+    
+    -bucle per anar passant per cada producte del cartList
+    -si el producte no existeix a cart, afegir-lo per primer cop
+    -si el prodicte SÍ exsteix a cart, afegir +1 a quantitat
+
+
+    
+    
+    
+    */
+
+    var ourTotal = 0;
+
+    for (let i = 0; i < cartList.length; i++) {
+        ourTotal += cartList[i];
+
+
+    }
+
+    console.log(ourTotal);
+
+
 }
 
 // Exercise 6
