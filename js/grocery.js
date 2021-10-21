@@ -51,6 +51,7 @@ var cartList = [
     //aquí s'han d'afegir els productes
 ];
 var cart = [];
+
 var subtotal = {
     grocery: {
         value: 0, 
@@ -162,23 +163,17 @@ function calculateSubtotals() {
 var total = 0;
 
 // Exercise 4
-function calculateTotal() {
-    // Calculate total price of the cart either using the "cartList" array
+function calculateTotal() {  
+    for (let sub in subtotal) {
 
-//no podem fer això: fer en canvi, un FOR IN LOOP
-    //total = subtotal.grocery.value + subtotal.beauty.value + subtotal.clothes.value;
-      
-    for (let x in subtotal) {
-        
+        for (let val in subtotal[sub]) {
+            
+            //console.log(sub, val, subtotal[sub][val]);
 
-
-        console.log(x);
-
-
+            total += subtotal[sub][val];
+        }
     }
-
-    console.log(total);  
-    
+    console.log(total);
 }
 
 // Exercise 5
