@@ -67,6 +67,8 @@ var subtotal = {
     },
 };
 
+var productsId;
+
 
 // Exercise 1
 function addToCartList(id) {
@@ -75,7 +77,7 @@ function addToCartList(id) {
     for (let i = 0; i < products.length; i++) {
 
         //buscar el producte a l'array products
-        var productsId = products[id - 1];
+        productsId = products[id - 1];
     }
     //afegir el producte a l'array cart list
     cartList.push(productsId);
@@ -99,61 +101,49 @@ function calculateSubtotals() {
     // 1. Create a for loop on the "cartList" array 
     for (let i = 0; i < cartList.length; i++) {
 
-        var cartListId = cartList.length;
-
-        console.log(cartList.length);
-
-        //console.log(cartList[i]);
-
-        switch(cartListId) {
-            case 1:
+        switch(cartList[i]) {
+            case products[0]:
                 subtotal.grocery.value = subtotal.grocery.value + 10.5;
                 break;
             
-            case 2:
+            case products[1]:
                 subtotal.grocery.value = subtotal.grocery.value + 6.25;
                 break;
             
-            case 3:
+            case products[2]:
                 subtotal.grocery.value = subtotal.grocery.value + 5;
                 break;
             
-            case 4:
+            case products[3]:
                 subtotal.beauty.value = subtotal.beauty.value + 260;
                 break;
 
-            case 5:
+            case products[4]:
                 subtotal.beauty.value = subtotal.beauty.value + 20.5;
                 break;
 
-            case 6:
+            case products[5]:
                 subtotal.beauty.value = subtotal.beauty.value + 12.75;
                 break;
 
-            case 7:
+            case products[6]:
                 subtotal.clothes.value = subtotal.clothes.value + 15;
                 break;
 
-            case 8:
+            case products[7]:
                 subtotal.clothes.value = subtotal.clothes.value + 19.99;
                 break;
 
-            case 9:
+            case products[8]:
                 subtotal.clothes.value = subtotal.clothes.value + 9.99;
                 break;          
         } //final switch
-
     } // final bucle for
-
     console.log(subtotal);
-
-
-    
-
 }
 
 
-
+//variable global total
 var total = 0;
 
 // Exercise 4
@@ -180,7 +170,8 @@ function generateCart() {
     
     -bucle per anar passant per cada producte del cartList
     -si el producte no existeix a cart, afegir-lo per primer cop
-    -si el prodicte SÍ exsteix a cart, afegir +1 a quantitat
+    -crear la propietat quantitat
+    -si el prodicte SÍ exsteix a cart, afegir (push) +1 a quantitat
 
 
     
