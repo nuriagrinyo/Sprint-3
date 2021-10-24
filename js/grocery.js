@@ -172,35 +172,28 @@ function generateCart() {
     -si el producte no existeix a cart, afegir-lo per primer cop i crear la propietat quantitat
     -si el prodicte SÍ exsteix a cart, +1 a quantitat
     */
+    
 
 
 
     for (let i = 0; i < cartList.length; i++) {
         
         //si el producte no existeix: + agregar la propietat quantity amb valor 1
+        let myBoolean = cart.includes(cartList[i]);
 
-        
-        
+        cartList[i].quantity = 0;
+
+        if (myBoolean == false) {
+            cartList[i].quantity = 1;
             cart.push(cartList[i]);
-            cart[i].quantity = 1;
-        
-
-            cart[i].quantity++;
-        
-            
-        cartList[i] /* NO està dins de */ 
-        
-            
-        
-        
-        //si el producte existeix
-
-
+        } else {
+            for (let y = 0; y < cart.length; y++) {
+                cartList[i].quantity = cartList[i].quantity + 1;
+            } 
+        }
     }
-
+    
     console.log(cart);
-
-
 }
 
 // Exercise 6
