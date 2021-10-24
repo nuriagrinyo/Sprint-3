@@ -169,25 +169,36 @@ function generateCart() {
     /*
     
     -bucle per anar passant per cada producte del cartList
-    -si el producte no existeix a cart, afegir-lo per primer cop
-    -crear la propietat quantitat
-    -si el prodicte SÍ exsteix a cart, afegir (push) +1 a quantitat
-
-
-    
-    
-    
+    -si el producte no existeix a cart, afegir-lo per primer cop i crear la propietat quantitat
+    -si el prodicte SÍ exsteix a cart, +1 a quantitat
     */
 
-    var ourTotal = 0;
+
 
     for (let i = 0; i < cartList.length; i++) {
-        ourTotal += cartList[i];
+        
+        //si el producte no existeix: + agregar la propietat quantity amb valor 1
+
+        
+        
+            cart.push(cartList[i]);
+            cart[i].quantity = 1;
+        
+
+            cart[i].quantity++;
+        
+            
+        cartList[i] /* NO està dins de */ 
+        
+            
+        
+        
+        //si el producte existeix
 
 
     }
 
-    console.log(ourTotal);
+    console.log(cart);
 
 
 }
