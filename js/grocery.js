@@ -199,6 +199,17 @@ function generateCart() {
 // Exercise 6
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
+
+    // - buscar ampolles d'oli
+    // - si hi ha 3 o més ampolles d'oli, crear camp discount i fer el descompte
+    // - buscar mescles per a fer pastís
+    // - si n'hi ha 10 o més, crear camp discount i fer el descompte
+
+    for (let i = 0; i < cart.length; i++) {
+
+    }
+
+
 }
 
 // Exercise 7
