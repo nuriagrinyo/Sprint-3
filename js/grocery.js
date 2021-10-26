@@ -70,6 +70,7 @@ var subtotal = {
 var productsId;
 
 
+/* EXERCICIS 1 I 5
 // Exercise 1
 function addToCartList(id) {
 
@@ -102,41 +103,45 @@ function generateCart() {
         console.log(cart);
     }
 
+    */
+
 
     // Exercise 7
 function addToCart(id) {
-    // busquem el producte a l'array products
-    for (let i = 0; i < products.length; i++) {
+    
+    for (let j = 0; j < products.length; j++) {
         productsId = products[id - 1];
     }
+    
+    cartList.push(productsId);
+    //console.log(cartList);
 
-    cart.push(productsId)
-    console.log(cart);
+    
 
-
-
-    for (let i = 0; i < cartList.length; i++) {
+        for (let i = 0; i < cartList.length; i++) {
             
-        let comprovar = cart.includes(cartList[i]) == true;
+            let comprovar = cart.includes(cartList[i]) == true;
+    
+            if (comprovar == false) {
+                cartList[i].quantity = 1;
+                cart.push(cartList[i]);     
+            } else if (comprovar) {          
+                cartList[i].quantity++;
+            }
 
-        if (comprovar == false) {
-            cartList[i].quantity = 1;
-            cart.push(cartList[i]);     
-        } else if (comprovar) {          
-            cartList[i].quantity++ + 1;
+
+            
         }
+
+        console.log(cart);
+        
+    
     }
-    console.log(cart);
-
-
-
-
-
-
 
 
     
-}
+
+
 
 
 
