@@ -194,20 +194,26 @@ function applyPromotionsCart() {
     for (let i = 0; i < cart.length; i++) {
 
         if (cart[i].name == "Cooking oil") {
-            console.log("tenim cooking oil");
+
+            let preuOli = cart[i].price;
+            let quantitatOli = cart[i].quantity;
+
+            if (cart[i].quantity >= 3) {
+                cart[i].subtotalWithDiscount = (preuOli - 0.5)*quantitatOli;
+            }
         }
         
         if (cart[i].name == "Instant cupcake mixture") {
-            console.log("tenim cupcake mixture");
+            
+            let preuMixture = cart[i].price;
+            let quantitatMixture = cart[i].quantity;
 
+            if (cart[i].quantity >= 10) {
+                cart[i].subtotalWithDiscount = ((2/3)*preuMixture)*quantitatMixture;
+            }
         }
-
-
-
+        console.log(cart);
     }
-
-
-
 }
 
 // Exercise 7
