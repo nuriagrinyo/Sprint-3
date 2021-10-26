@@ -2,7 +2,7 @@
 // Move this variable to a json file and load the data in this js
 var products = [
     {
-        name: 'cooking oil',
+        name: 'Cooking oil',
         price: 10.5,
         type: 'grocery'
     },
@@ -180,11 +180,6 @@ function generateCart() {
         console.log(cart);
     }
        
-    
-    
-
-    
-
 
 // Exercise 6
 function applyPromotionsCart() {
@@ -194,6 +189,22 @@ function applyPromotionsCart() {
     // - si hi ha 3 o més ampolles d'oli, fer el descompte
     // - buscar mescles per a fer pastís
     //
+
+
+    for (let i = 0; i < cart.length; i++) {
+
+        if (cart[i].name == "Cooking oil") {
+            console.log("tenim cooking oil");
+        }
+        
+        if (cart[i].name == "Instant cupcake mixture") {
+            console.log("tenim cupcake mixture");
+
+        }
+
+
+
+    }
 
 
 
