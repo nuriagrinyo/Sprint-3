@@ -75,14 +75,69 @@ function addToCartList(id) {
 
     //buscar el produccte a l'array PRODUCTS
     for (let i = 0; i < products.length; i++) {
-
-        //buscar el producte a l'array products
         productsId = products[id - 1];
     }
     //afegir el producte a l'array cart list
     cartList.push(productsId);
     console.log(cartList);
 }
+
+// Exercise 5
+function generateCart() {
+    // Using the "cartlist" array that contains all the items in the shopping cart, 
+    // generate the "cart" array that does not contain repeated items, 
+    // instead each item of this array "cart" shows the quantity of product.
+
+        for (let i = 0; i < cartList.length; i++) {
+            
+            let comprovar = cart.includes(cartList[i]) == true;
+    
+            if (comprovar == false) {
+                cartList[i].quantity = 1;
+                cart.push(cartList[i]);     
+            } else if (comprovar) {          
+                cartList[i].quantity++ + 1;
+            }
+        }
+        console.log(cart);
+    }
+
+
+    // Exercise 7
+function addToCart(id) {
+    // busquem el producte a l'array products
+    for (let i = 0; i < products.length; i++) {
+        productsId = products[id - 1];
+    }
+
+    cart.push(productsId)
+    console.log(cart);
+
+
+
+    for (let i = 0; i < cartList.length; i++) {
+            
+        let comprovar = cart.includes(cartList[i]) == true;
+
+        if (comprovar == false) {
+            cartList[i].quantity = 1;
+            cart.push(cartList[i]);     
+        } else if (comprovar) {          
+            cartList[i].quantity++ + 1;
+        }
+    }
+    console.log(cart);
+
+
+
+
+
+
+
+
+    
+}
+
 
 
 // Exercise 2
@@ -160,26 +215,7 @@ function calculateTotal() {
     console.log(total);
 }
 
-// Exercise 5
-function generateCart() {
-    // Using the "cartlist" array that contains all the items in the shopping cart, 
-    // generate the "cart" array that does not contain repeated items, 
-    // instead each item of this array "cart" shows the quantity of product.
 
-        for (let i = 0; i < cartList.length; i++) {
-            
-            let comprovar = cart.includes(cartList[i]) == true;
-    
-            if (comprovar == false) {
-                cartList[i].quantity = 1;
-                cart.push(cartList[i]);     
-            } else if (comprovar) {          
-                cartList[i].quantity++ + 1;
-            }
-        }
-        console.log(cart);
-    }
-       
 
 // Exercise 6
 function applyPromotionsCart() {
@@ -216,11 +252,7 @@ function applyPromotionsCart() {
     }
 }
 
-// Exercise 7
-function addToCart(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
-}
+
 
 // Exercise 8
 function removeFromCart(id) {
