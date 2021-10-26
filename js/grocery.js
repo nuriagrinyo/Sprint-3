@@ -166,48 +166,35 @@ function generateCart() {
     // generate the "cart" array that does not contain repeated items, 
     // instead each item of this array "cart" shows the quantity of product.
 
-    /*
+        for (let i = 0; i < cartList.length; i++) {
+            
+            let comprovar = cart.includes(cartList[i]) == true;
     
-    -bucle per anar passant per cada producte del cartList
-    -si el producte no existeix a cart, afegir-lo per primer cop i crear la propietat quantitat
-    -si el prodicte SÍ exsteix a cart, +1 a quantitat
-    */
-    
-
-
-
-    for (let i = 0; i < cartList.length; i++) {
-        
-        //si el producte no existeix: + agregar la propietat quantity amb valor 1
-        let myBoolean = cart.includes(cartList[i]);
-
-        cartList[i].quantity = 0;
-
-        if (myBoolean == false) {
-            cartList[i].quantity = 1;
-            cart.push(cartList[i]);
-        } else {
-            for (let y = 0; y < cart.length; y++) {
-                cartList[i].quantity = cartList[i].quantity + 1;
-            } 
+            if (comprovar == false) {
+                cartList[i].quantity = 1;
+                cart.push(cartList[i]);     
+            } else if (comprovar) {          
+                cartList[i].quantity++ + 1;
+            }
         }
+        console.log(cart);
     }
+       
     
-    console.log(cart);
-}
+    
+
+    
+
 
 // Exercise 6
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
 
     // - buscar ampolles d'oli
-    // - si hi ha 3 o més ampolles d'oli, crear camp discount i fer el descompte
+    // - si hi ha 3 o més ampolles d'oli, fer el descompte
     // - buscar mescles per a fer pastís
-    // - si n'hi ha 10 o més, crear camp discount i fer el descompte
+    //
 
-    for (let i = 0; i < cart.length; i++) {
-
-    }
 
 
 }
