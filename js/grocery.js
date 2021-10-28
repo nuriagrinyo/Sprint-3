@@ -69,8 +69,8 @@ var subtotal = {
 
 var productsId;
 
-
-/* EXERCICIS 1 I 5
+/*
+//EXERCICIS 1 I 5 (botó add to cart)
 // Exercise 1
 function addToCartList(id) {
 
@@ -102,47 +102,29 @@ function generateCart() {
         }
         console.log(cart);
     }
+*/
+    
 
-    */
 
-
-    // Exercise 7
+    // Exercici 7 (botó Cart)
 function addToCart(id) {
     
     for (let j = 0; j < products.length; j++) {
-        productsId = products[id - 1];
+        productId = products[id - 1];
     }
+    comprovar = cart.includes(productId);
     
-    cartList.push(productsId);
-    //console.log(cartList);
-
-    
-
-        for (let i = 0; i < cartList.length; i++) {
-            
-            let comprovar = cart.includes(cartList[i]) == true;
-    
-            if (comprovar == false) {
-                cartList[i].quantity = 1;
-                cart.push(cartList[i]);     
-            } else if (comprovar) {          
-                cartList[i].quantity++;
-            }
-
-
-            
-        }
-
-        console.log(cart);
-        
-    
+    if (comprovar == false) {
+        cart.push(productId);
+        productId.quantity = 1;
+    } else if (comprovar) {
+        productId.quantity = productId.quantity + 1;
+    }
+    console.log(cart);
     }
 
 
     
-
-
-
 
 
 // Exercise 2
@@ -156,7 +138,8 @@ function cleanCart() {
 
 }
 
-// Exercise 3
+/*
+// Exercise 3 (amb exercicis 1 i 5)
 function calculateSubtotals() {
     // 1. Create a for loop on the "cartList" array 
     for (let i = 0; i < cartList.length; i++) {
@@ -201,6 +184,55 @@ function calculateSubtotals() {
     } // final bucle for
     console.log(subtotal);
 }
+*/
+
+//Exercici 3 amb exercici 7
+
+function calculateSubtotals() {
+    for (let i = 0; i < cart.length; i++) {
+
+        switch(cart[i]) {
+            case products[0]:
+                subtotal.grocery.value = subtotal.grocery.value + (products[0].price * cart[i].quantity);
+                break;
+            
+            case products[1]:
+                subtotal.grocery.value = subtotal.grocery.value + (products[1].price * cart[i].quantity);
+                break;
+            
+            case products[2]:
+                subtotal.grocery.value = subtotal.grocery.value + (products[2].price * cart[i].quantity);
+                break;
+            
+            case products[3]:
+                subtotal.beauty.value = subtotal.beauty.value + (products[3].price * cart[i].quantity);
+                break;
+
+            case products[4]:
+                subtotal.beauty.value = subtotal.beauty.value + (products[4].price * cart[i].quantity);
+                break;
+
+            case products[5]:
+                subtotal.beauty.value = subtotal.beauty.value + (products[5].price * cart[i].quantity);
+                break;
+
+            case products[6]:
+                subtotal.clothes.value = subtotal.clothes.value + (products[6].price * cart[i].quantity);
+                break;
+
+            case products[7]:
+                subtotal.clothes.value = subtotal.clothes.value + (products[7].price * cart[i].quantity);
+                break;
+
+            case products[8]:
+                subtotal.clothes.value = subtotal.clothes.value + (products[8].price * cart[i].quantity);
+                break;          
+        } //final switch
+    } // final bucle for
+    console.log(subtotal);
+}
+
+
 
 
 //variable global total
@@ -259,13 +291,13 @@ function applyPromotionsCart() {
 
 
 
-// Exercise 8
+// Exercise 9
 function removeFromCart(id) {
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cartList array
 }
 
-// Exercise 9
+// Exercise 10
 function printCart() {
     // Fill the shopping cart modal manipulating the shopping cart dom
 }
