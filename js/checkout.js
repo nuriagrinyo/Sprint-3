@@ -8,64 +8,60 @@ var nom = document.querySelector('.name');
 // Get the error elements
 var errorPassword = document.getElementById("errorPassword");
 var errorName = document.getElementById('errorName');  
-var errorPhone = document.getElementById('errorPhone');
-*/
-
-
-const form = document.getElementById("form");
-const firstName = document.getElementById("firstNname");
-const email = document.getElementById("email");
-const adress = document.getElementById("adress");
-const lastName = document.getElementById("lastName");
-const password = document.getElementById("password");
-const phone = document.getElementById("phone");
+var errorPhone = document.getElementById('errorPhone');*/
 
 
 
+var form = document.getElementById("form");
+
+var nom = document.getElementById("nom");
+
+
+
+
+
+form.addEventListener("submit", (e) =>  {
+        e.preventDefault();
+        validate();
+})
 
 
 
 function validate() {
 
-    const firstNameValue = firstName.value.trim();
-    const emailValue = email.value.trim();
-    const adressValue = adress.value.trim();
-    const lastNameValue = lastName.value.trim();
-    const passwordValue = password.value.trim();
-    const phoneValue = phone.value.trim();
+    // get the values from the inputs
+    var nomValue = nom.value;
 
-   
-    if (firstName === " ") {
-        // show error
+    if (nomValue === '' || nomValue === null) {
+        //show error
         //add error class
-        console.log("error");
-        //setErrorFor(firstName, "El nom no pot estar buit");
+        setErrorFor(nom, "Cal escriure un nom");
 
     } else {
-        // success class
-        setSuccessFor(firstName);
-
+        //add success class
+        setSuccessFor(nom);
     }
 
-
-    return false;
-
+    
 
 }
+
 
 function setErrorFor(input, message) {
-    const formControl = input.parentElement;
+    var formControl = input.parentElement; //form-control
+    var small = formControl.querySelector("small");
 
+    //add error message inside small
+    small.innerText = message;
+
+    //add error class
+    formControl.className = "form-control error";
 
 }
 
+function setSuccessFor(input) {
+    var formControl = input.parentElement; //form-control
+    formControl.className = "form-control success";
 
-/* 
+}
 
-
-- La contrasenya ha d'incloure números i lletres.
-
-
-
-
-*/
