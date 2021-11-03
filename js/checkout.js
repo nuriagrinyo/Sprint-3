@@ -36,7 +36,7 @@ function validate() {
 
     // EMAIL
     if (emailValue === '' || emailValue === null) {
-        setErrorFor(email, "Emial cannot be blank");
+        setErrorFor(email, "Email cannot be blank");
     } else if (!comprovarEmail(emailValue)) {
         setErrorFor(email, "Please, enter a valid email");
     } else {

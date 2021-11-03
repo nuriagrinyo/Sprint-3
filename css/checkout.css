@@ -3,13 +3,14 @@
 body {
     font-family: Poppins;
 }
-/*
-#errorPassword, #errorName, #errorPhone {
-    display: none;
-}*/
 
+.form-control {
+    height: fit-content;
+}
 
-
+.form-control label {
+    display: inline-block;
+}
 
 .form-control.success input {
     border-color: green;
@@ -19,12 +20,11 @@ body {
     border-color: red;
 }
 
-
-
+/* Icones */
 .form-control i {
     position: absolute;
     visibility: hidden;
-
+    margin-left: 10px;
 }
 
 .form-control.success i.fa-check-circle {
@@ -37,9 +37,12 @@ body {
     color: red;
 }
 
+/* Missatge error */
 .form-control small {
     position: absolute;
     visibility: hidden;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 .form-control.error small {
@@ -47,4 +50,3 @@ body {
     visibility: visible;
 }
   
-
