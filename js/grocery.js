@@ -47,9 +47,7 @@ var products = [
         type: 'clothes'
     }
 ]
-var cartList = [
-    //aquí s'han d'afegir els productes
-];
+var cartList = [];
 var cart = [];
 
 var subtotal = {
@@ -103,7 +101,6 @@ function generateCart() {
         console.log(cart);
     }
 */
-    
 
 
     // Exercici 7 (botó Cart)
@@ -124,18 +121,12 @@ function addToCart(id) {
     }
 
 
-    
-
-
-// Exercise 2
+// Exercici 2
 function cleanCart() {
-
     while (cartList.length > 0) {
         cartList.pop();
     }
-
     console.log(cartList);
-
 }
 
 /*
@@ -186,8 +177,8 @@ function calculateSubtotals() {
 }
 */
 
-//Exercici 3 amb exercici 7
 
+//Exercici 3 amb exercici 7
 function calculateSubtotals() {
     for (let i = 0; i < cart.length; i++) {
 
@@ -234,7 +225,6 @@ function calculateSubtotals() {
 
 
 
-
 //variable global total
 var total = 0;
 
@@ -243,9 +233,6 @@ function calculateTotal() {
     for (let sub in subtotal) {
 
         for (let val in subtotal[sub]) {
-            
-            //console.log(sub, val, subtotal[sub][val]);
-
             total += subtotal[sub][val];
         }
     }
@@ -253,17 +240,9 @@ function calculateTotal() {
 }
 
 
-
-// Exercise 6
+// Exercici 6
 function applyPromotionsCart() {
-    // Apply promotions to each item in the array "cart"
-
-    // - buscar ampolles d'oli
-    // - si hi ha 3 o més ampolles d'oli, fer el descompte
-    // - buscar mescles per a fer pastís
-    //
-
-
+    
     for (let i = 0; i < cart.length; i++) {
 
         if (cart[i].name == "Cooking oil") {
